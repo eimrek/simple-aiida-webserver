@@ -1,0 +1,11 @@
+services:
+  aiida-server:
+    build:
+      context: .
+    environment:
+      TZ: Europe/Zurich
+    volumes:
+      - ./archives:/home/ubuntu/archives
+    ports:
+      - 5000:5000
+      - 5001:5001
